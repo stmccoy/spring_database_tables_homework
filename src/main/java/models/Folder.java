@@ -12,7 +12,7 @@ public class Folder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID;
+    private Long ID;
 
     @Column(name = "title")
     private String title;
@@ -32,11 +32,11 @@ public class Folder {
         this.files = new ArrayList<>();
     }
 
-    public long getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(long ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
