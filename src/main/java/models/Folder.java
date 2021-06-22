@@ -26,10 +26,11 @@ public class Folder {
     @JsonIgnoreProperties({"folder"})
     private List<File> files;
 
-    public Folder(String title, User user, List<File> files) {
+    public Folder(String title, User user) {
         this.title = title;
         this.user = user;
         this.files = new ArrayList<>();
+        user.addFolder(this);
     }
 
     public Long getID() {
@@ -60,7 +61,7 @@ public class Folder {
         return files;
     }
 
-    public void setFiles(List<File> files) {
-        this.files = files;
+    public void addFile(File file){
+        this.files.add(file);
     }
 }

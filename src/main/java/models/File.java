@@ -1,7 +1,7 @@
 package models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.hibernate.annotations.Cascade;
+
 
 import javax.persistence.*;
 
@@ -32,6 +32,7 @@ public class File {
         this.extension = extension;
         this.size = size;
         this.folder = folder;
+        folder.addFile(this);
     }
 
     public File() {

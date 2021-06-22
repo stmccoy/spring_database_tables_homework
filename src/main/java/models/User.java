@@ -21,7 +21,7 @@ public class User {
     @JsonIgnoreProperties("user")
     private List<Folder> folders;
 
-    public User(String name, List<Folder> folders) {
+    public User(String name) {
         this.name = name;
         this.folders = new ArrayList<>();
     }
@@ -46,7 +46,7 @@ public class User {
         return folders;
     }
 
-    public void setFolders(List<Folder> folders) {
-        this.folders = folders;
+    public void addFolder(Folder folder){
+        this.folders.add(folder);
     }
 }
