@@ -1,16 +1,17 @@
-package components;
+package spring.restfulroutes.homework.codeclan.components;
 
-import models.File;
-import models.Folder;
-import models.User;
+import org.springframework.stereotype.Component;
+import spring.restfulroutes.homework.codeclan.models.File;
+import spring.restfulroutes.homework.codeclan.models.Folder;
+import spring.restfulroutes.homework.codeclan.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import repositories.FileRepository;
-import repositories.FolderRepository;
-import repositories.UserRepository;
+import spring.restfulroutes.homework.codeclan.repositories.FileRepository;
+import spring.restfulroutes.homework.codeclan.repositories.FolderRepository;
+import spring.restfulroutes.homework.codeclan.repositories.UserRepository;
 
-
+@Component
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
@@ -22,10 +23,6 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     FolderRepository folderRepository;
 
-    public DataLoader(){
-
-    }
-
     public void run(ApplicationArguments args){
         User user = new User("Fred");
         userRepository.save(user);
@@ -33,6 +30,7 @@ public class DataLoader implements ApplicationRunner {
         folderRepository.save(folder);
         File file = new File("Picture", ".jpeg", 20, folder);
         fileRepository.save(file);
+
     }
 
 }

@@ -1,11 +1,11 @@
-package controllers;
+package spring.restfulroutes.homework.codeclan.controllers;
 
-import models.User;
+import spring.restfulroutes.homework.codeclan.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import repositories.UserRepository;
+import spring.restfulroutes.homework.codeclan.repositories.UserRepository;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package models;
+package spring.restfulroutes.homework.codeclan.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -17,13 +17,17 @@ public class User {
     @Column(name = "name")
     private String name;
 
-    @ManyToOne
     @JsonIgnoreProperties("user")
+    @OneToMany(mappedBy = "user")
     private List<Folder> folders;
 
     public User(String name) {
         this.name = name;
         this.folders = new ArrayList<>();
+    }
+
+    public User(){
+
     }
 
     public Long getID() {

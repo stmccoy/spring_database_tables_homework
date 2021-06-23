@@ -1,4 +1,4 @@
-package models;
+package spring.restfulroutes.homework.codeclan.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -32,7 +32,6 @@ public class File {
         this.extension = extension;
         this.size = size;
         this.folder = folder;
-        folder.addFile(this);
     }
 
     public File() {

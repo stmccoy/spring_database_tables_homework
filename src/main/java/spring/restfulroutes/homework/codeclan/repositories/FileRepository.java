@@ -1,6 +1,6 @@
-package repositories;
+package spring.restfulroutes.homework.codeclan.repositories;
 
-import models.File;
+import spring.restfulroutes.homework.codeclan.models.File;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
